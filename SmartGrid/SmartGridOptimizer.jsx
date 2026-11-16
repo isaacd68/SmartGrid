@@ -4,11 +4,6 @@ import * as d3 from 'd3';
 
 // Smart Grid Optimizer - React Application
 // This application demonstrates how machine learning can be used to optimize electrical grid performance
-// It includes:
-// 1. Real-time grid simulation with power flow visualization
-// 2. ML-based load prediction and optimization
-// 3. Fault detection system
-// 4. Energy efficiency metrics
 
 export default function SmartGridOptimizer() {
   // State for grid simulation
@@ -269,7 +264,7 @@ export default function SmartGridOptimizer() {
     
     // Calculate new power flows
     const optimizedConnections = gridState.connections.map(conn => {
-      const loadReduction = Math.random() * 0.2; // 0-20% reduction
+      const loadReduction = Math.random() * 0.2; 
       return {
         ...conn,
         load: conn.load * (1 - loadReduction),
@@ -277,7 +272,7 @@ export default function SmartGridOptimizer() {
     });
     
     // Calculate efficiency improvement
-    const newEfficiency = gridState.efficiency + (Math.random() * 0.08); // 0-8% improvement
+    const newEfficiency = gridState.efficiency + (Math.random() * 0.08); 
     
     // Update optimization results
     const results = [
@@ -285,9 +280,9 @@ export default function SmartGridOptimizer() {
       {
         timestamp: new Date().toLocaleTimeString(),
         efficiency: newEfficiency.toFixed(2),
-        loadReduction: (Math.random() * 12 + 3).toFixed(1) + '%', // 3-15%
-        costSavings: '$' + (Math.random() * 1200 + 300).toFixed(2), // $300-$1500
-        co2Reduction: (Math.random() * 2 + 0.5).toFixed(1) + ' tons', // 0.5-2.5 tons
+        loadReduction: (Math.random() * 12 + 3).toFixed(1) + '%', 
+        costSavings: '$' + (Math.random() * 1200 + 300).toFixed(2), 
+        co2Reduction: (Math.random() * 2 + 0.5).toFixed(1) + ' tons', 
       }
     ];
     
